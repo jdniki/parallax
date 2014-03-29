@@ -2,50 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <title>parallax</title>
-    <link href="third-party/less/bootstrap.css" rel="stylesheet">
 
     <link href="css/wave_svg.less"  type="text/less" rel="stylesheet">
     <link href="css/sky.less"  type="text/less" rel="stylesheet">
-    <script src="third-party/js/jquery-2.0.3.js"></script>
-    <script src="js/script.js"></script>
-    <script src="third-party/js/less-1.5.0.min.js"></script>
-    <script src="third-party/js/snap.svg-min.js"></script>
-
-    <script src="js/svg.js"></script>
 
 </head>
-
 <body>
-
-
-
 <div  id="container"  class="container">
 
     <div class="wave space">
         <ul id="space" class="scene">
-            <li class="layer" data-depth="1.00">
-                <div class="background-layer-front">
-                    <svg version="1.1" id="near" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
-                </div>
-            </li>
-
-            <li class="layer" data-depth="0.50">
-                <div class="background-layer-mid">
-                    <svg version="1.1" id="middle" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
-                </div>
-            </li>
 
             <li class="layer" data-depth="0.00">
-                <div class="background-layer-back">
+                <div class="background-layer-back"data-0="margin:200px auto auto 0px;" data-400="margin:0px auto auto 0px;">
                     <svg version="1.1" id="far" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
                 </div>
             </li>
 
 
+
+            <li class="layer" data-depth="0.50">
+                <div class="background-layer-mid" data-0="margin:300px auto auto 0px;" data-400="margin:0px auto auto 0px;">
+                    <svg version="1.1" id="middle" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
+                </div>
+            </li>
+
+
+            <li class="layer" data-depth="1.00">
+                <div class="background-layer-front" data-0="margin:400px auto auto 0px;" data-400="margin:0px auto auto 0px;">
+                    <svg version="1.1" id="near" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -97,20 +87,31 @@
 
 </div>
 
-
+<script src="third-party/js/jquery-2.0.3.js"></script>
+<script src="third-party/js/less-1.5.0.min.js"></script>
+<script src="third-party/js/snap.svg-min.js"></script>
 
 <!-- Scripts -->
-    <script src="third-party/js/parallax.js"></script>
+<script src="third-party/js/parallax.js"></script>
 
-    <script>
+<script type="text/javascript" src="third-party/js/skrollr.min.js"></script>
+<script type="text/javascript">
+    skrollr.init();
+</script>
 
-        // Pretty simple huh?
-        var scene = document.getElementById('scene');
-        var parallax = new Parallax(scene);
-         scene = document.getElementById('space');
-        var parallax_space = new Parallax(scene);
+<script src="js/script.js"></script>
+<script src="js/svg.js"></script>
 
-    </script>
+
+<script>
+
+    // Pretty simple huh?
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+    scene = document.getElementById('space');
+    var parallax_space = new Parallax(scene);
+
+</script>
 
 
 </body>

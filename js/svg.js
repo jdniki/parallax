@@ -77,7 +77,7 @@ window.onload = function () {
         fill: background.gradient("l(1, 0, 1, 1) #f8fefc-#a6fef6-#a6fef6")
     });
 
-    Snap.load("img/chibi.svg", function (f) {
+    Snap.load("svg/chibi.svg", function (f) {
         f.selectAll("polygon[fill='#09B39C']").attr({fill: "#bada55"});
         g = f.select("g");
         background.append(g);
