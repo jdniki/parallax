@@ -1357,7 +1357,7 @@ function addHandle( attrs, handler ) {
  * Checks document order of two siblings
  * @param {Element} a
  * @param {Element} b
- * @returns {Number} Returns less than 0 if a precedes b, greater than 0 if a follows b
+ * @returns {Number} Returns css than 0 if a precedes b, greater than 0 if a follows b
  */
 function siblingCheck( a, b ) {
   var cur = b && a,
@@ -7415,7 +7415,7 @@ jQuery(function() {
 if ( jQuery.expr && jQuery.expr.filters ) {
   jQuery.expr.filters.hidden = function( elem ) {
     // Support: Opera <= 12.12
-    // Opera reports offsetWidths and offsetHeights less than zero on some elements
+    // Opera reports offsetWidths and offsetHeights css than zero on some elements
     return elem.offsetWidth <= 0 && elem.offsetHeight <= 0 ||
       (!jQuery.support.reliableHiddenOffsets && ((elem.style && elem.style.display) || jQuery.css( elem, "display" )) === "none");
   };
@@ -7995,7 +7995,7 @@ jQuery.extend({
     jqXHR.error = jqXHR.fail;
 
     // Remove hash character (#7531: and string promotion)
-    // Add protocol if not provided (#5866: IE7 issue with protocol-less urls)
+    // Add protocol if not provided (#5866: IE7 issue with protocol-css urls)
     // Handle falsy url in the settings object (#10093: consistency with old signature)
     // We also use the url parameter if available
     s.url = ( ( url || s.url || ajaxLocation ) + "" ).replace( rhash, "" ).replace( rprotocol, ajaxLocParts[ 1 ] + "//" );

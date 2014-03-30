@@ -6,8 +6,9 @@
 
     <title>parallax</title>
 
-    <link href="css/wave_svg.less"  type="text/less" rel="stylesheet">
-    <link href="css/sky.less"  type="text/less" rel="stylesheet">
+    <link href="css/bubble.less"  type="text/less" rel="stylesheet">
+    <link href="css/cloud.less"  type="text/less" rel="stylesheet">
+    <link href="css/custom.less"  type="text/less" rel="stylesheet">
 
 </head>
 <body>
@@ -46,7 +47,6 @@
         </div>
 
         <div class="wave">
-
             <div class="land">
                 <div id="cloudy_sky" class="sky_container">
                     <ul id="sky" class="sky">
@@ -55,30 +55,24 @@
                 <svg version="1.1" id="land" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
             </div>
 
-
             <ul id="scene" class="scene">
-
                 <li class="layer" data-depth="0.20">
-                    <div class="background-layer-front">
+                    <div class="background-layer-front" >
                         <svg version="1.1" id="snap" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
                     </div>
                 </li>
 
                 <li class="layer" data-depth="0.60">
-                    <div class="background-layer-mid">
+                    <div class="background-layer-mid" data-1440="margin:40px auto auto 0px;" data-1600="margin:10px auto auto 0px;">
                         <svg version="1.1" id="snap-2" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
                     </div>
                 </li>
 
-                <!--addee just a line-->
-
                 <li class="layer" data-depth="1.00">
-                    <div class="background-layer-back">
+                    <div class="background-layer-back" data-1440="margin:60px auto auto 0px;" data-1600="margin:16px auto auto 0px;">
                         <svg version="1.1" id="snap-3" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
                     </div>
                 </li>
-
-
             </ul>
         </div>
         <div class="under-sea">

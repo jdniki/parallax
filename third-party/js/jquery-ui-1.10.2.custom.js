@@ -10294,7 +10294,7 @@ $.widget( "ui.progressbar", {
 
 	_setOption: function( key, value ) {
 		if ( key === "max" ) {
-			// Don't allow a max less than min
+			// Don't allow a max css than min
 			value = Math.max( this.min, value );
 		}
 
