@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="../css/bubble.less"  type="text/less" rel="stylesheet">
+    <title>skrollr - parallax scrolling for the masses</title>
+    <link href="rnd/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div  id="container"  class="container">
+
+    <div class="wave space">
+<ul id="space" class="scene">
+    <li class="layer"  data-depth="0.80">
+        <div id="bg1" data-0="margin:0px auto auto 0px;" data-400="margin:-200px auto auto -500px;">
+            <svg version="1.1" id="near" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+    </li>
+    <li class="layer" data-depth="0.40">
+    <div id="bg2" data-0="margin:0px auto auto 0px;" data-400="margin:-400px auto auto -500px;">
+        <svg version="1.1" id="middle" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    </li>
+    <li class="layer" data-depth="0.20">
+    <div id="bg3" data-0="margin:0px auto auto 0px;" data-400="margin:-600px auto auto -500px;">
+        <svg version="1.1" id="far" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    </li>
+    </ul>
+
+        </div></div>
+<script src="../third-party/js/parallax.js"></script>
+<script src="../third-party/js/jquery-2.0.3.js"></script>
+<script src="../third-party/js/less-1.5.0.min.js"></script>
+<script src="../third-party/js/snap.svg-min.js"></script>
+
+
+<script type="text/javascript" src="../third-party/js/skrollr.min.js"></script>
+<script type="text/javascript">
+    skrollr.init();
+    scene = document.getElementById('space');
+    var parallax_space = new Parallax(scene);
+
+</script>
+<script src="../js/svg.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>parallax</title>
+
+    <link href="css/bubble.less"  type="text/less" rel="stylesheet">
+    <link href="css/cloud.less"  type="text/less" rel="stylesheet">
+
+</head>
+<body>
+<div  id="container"  class="container">
+
+
+    <div>
+        <div class="wave">
+            <ul id="scene" class="scene">
+
+                <li class="layer" data-depth="0.20">
+                    <div class="background-layer-front" >
+                        <svg version="1.1" id="snap" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
+                        <div class="sea">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="layer" data-depth="0.60">
+                    <div class="background-layer-mid" data-1440="margin:40px auto auto 0px;" data-1600="margin:10px auto auto 0px;">
+                        <svg version="1.1" id="snap-2" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
+                        <div class="sea">
+                        </div>
+                    </div>
+                </li>
+
+                <!--addee just a line-->
+
+                <li class="layer" data-depth="1.00">
+                    <div class="background-layer-back" data-1440="margin:60px auto auto 0px;" data-1600="margin:16px auto auto 0px;">
+                        <svg version="1.1" id="snap-3" class="snap" xmlns="http://www.w3.org/2000/svg"></svg>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="under-sea">
+        </div>
+    </div>
+
+</div>
+
+<script src="third-party/js/jquery-2.0.3.js"></script>
+<script src="third-party/js/less-1.5.0.min.js"></script>
+<script src="third-party/js/snap.svg-min.js"></script>
+
+<!-- Scripts -->
+<script src="third-party/js/parallax.js"></script>
+
+<script type="text/javascript" src="third-party/js/skrollr.min.js"></script>
+<script type="text/javascript">
+    skrollr.init();
+</script>
+
+<script src="js/script.js"></script>
+<script src="js/svg.js"></script>
+
+
+<script>
+
+    // Pretty simple huh?
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+    scene = document.getElementById('space');
+    var parallax_space = new Parallax(scene);
+
+</script>
+
+
+</body>
+</html>
